@@ -1,0 +1,130 @@
+
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+	max-width: 1024px;
+	margin: auto;
+}
+
+.main > * {
+	flex: 1;
+	padding: 1em;
+}
+
+.main > header, .main > footer {
+	flex: 0;
+	background-color: #E0E3F5;
+}
+
+.title {
+	font-size: 2em;
+	margin: 1em 0;
+}
+
+.title a {
+	position: relative;
+	padding-left: 2em;
+}
+
+.title a:before {
+	display: block;
+    content: "";
+    width: 2em;
+    height: 2em;
+    position: absolute;
+    background-image: url(/assets/logo-coffee.svg);
+    top: 50%;
+    margin-top: -1.2em;
+    background-size: 120%;
+}
+
+section.top {
+	border-bottom: .3em solid #E0E3F5;
+    margin-bottom: 1em;
+}
+
+.list-group {
+	display: flex;
+}
+
+.list-group > * {
+	flex: 1;
+}
+
+.content-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.content-list li {
+	padding: .5em 0;
+}
+
+.content-list a {
+	display: flex;
+	padding: .5em;
+}
+
+.content-list img {
+	height: 3em;
+    padding-right: .5em;
+}
+
+.item-grid {
+	display: flex;
+	flex-wrap: wrap;
+
+	display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(13em, 1fr));
+}
+
+.item-grid .item {
+	max-width: 15em;
+    min-width: 10em;
+    flex: 0 1 12em;
+    margin: .5em;
+    text-align: center;
+}
+
+a, a:visited {
+	text-decoration: none;
+	font-weight: bold;
+	color: #4E3E2C;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.list-group a {
+	color: inherit;
+}
+
+h1 a:hover, h2 a:hover, .title a:hover, .content-list a:hover, .item-grid .item:hover {
+	text-decoration: none;
+}
+
+.content-list a:hover, .item:hover {
+	background-color: #f3f3f3;
+}
+
+.snipcart-add-item {
+	border: 0;
+    background-color: #E0E3F5;
+    font-size: 1em;
+    font-weight: bold;
+    padding: .5em;
+    box-sizing: border-box;
+    height: 2.2em;
+    cursor: pointer;
+}
+
+.snipcart-add-item:hover {
+	border: 1px solid black;
+}

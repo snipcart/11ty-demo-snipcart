@@ -1,0 +1,29 @@
+---
+title: Products
+layout: default.ejs
+permalink: /products/
+---
+<section class="top">
+	<h1>Grooming products for every types of hairs</h2>
+	<p>
+		Except balds…
+	</p>
+</section>
+<section class="item-grid">
+	{{#collections.products}}
+	<a href="{{url}}" class="item">
+		<img src="{{data.image}}" alt="{{data.name}}" />
+		<h2>{{data.name}}</h2>
+		<p>
+			<button class="snipcart-add-item"
+					data-item-id="11ty-{{fileSlug}}"
+					data-item-name="{{data.name}}"
+					data-item-price="{{data.price}}"
+					data-item-image="{{data.image}}"
+					data-item-url="{{config.siteUrl}}/products.json">
+				Buy for {{data.price}}$
+			</button>
+		</p>
+	</a>
+	{{/collections.products}}
+</section>

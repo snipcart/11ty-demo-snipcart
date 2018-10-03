@@ -1,0 +1,20 @@
+<h2>
+	<a href="<%= url %>"><%= title %></a>
+</h2>
+<ul class="content-list">
+	<% list.slice(0, 3).map(map).map((item) => { %>
+		<li>
+			<a href="<%= item.url %>">
+				<% if(item.image){ %>
+					<img src="<%= item.image %>" alt="<%= item.label %>" />
+				<% } %>
+				<div>
+					<p><%= item.label %></p>
+				</div>
+			</a>
+		</li>
+	<% }) %>
+	<li>
+		<a href="<%= url %>">See more…</a>
+	</li>
+</ul>

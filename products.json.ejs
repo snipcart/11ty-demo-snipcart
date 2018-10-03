@@ -1,0 +1,14 @@
+---
+permalink: /products.json
+---
+<%- JSON.stringify(
+
+collections.products.map((product) => ({
+	id: "11ty-" + product.fileSlug,
+	name: product.data.name,
+	price: product.data.price,
+	image: config.siteUrl + product.data.image,
+	data: Object.keys(product),
+}))
+
+) %>

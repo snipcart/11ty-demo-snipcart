@@ -1,5 +1,9 @@
 <h2>
-	<a href="<%= url %>"><%= title %></a>
+	<% if(this.url){ %>
+		<a href="<%= url %>"><%= title %></a>
+	<% } else { %>
+		<%= title %>
+	<% } %>
 </h2>
 <ul class="content-list">
 	<% list.slice(0, 3).map(map).map((item) => { %>
@@ -14,7 +18,9 @@
 			</a>
 		</li>
 	<% }) %>
+	<% if(this.url){ %>
 	<li>
 		<a href="<%= url %>">See more…</a>
 	</li>
+	<% } %>
 </ul>

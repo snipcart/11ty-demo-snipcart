@@ -34,7 +34,6 @@ permalink: /
 		<%- include('/item-list', {
 			title: 'Recent Articles',
 			list: collections.posts,
-			url: '/blog/',
 			map: (post) => ({
 				image: post.data.image,
 				url: post.url,

@@ -15,22 +15,25 @@ title:
 	<link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" type="text/css" rel="stylesheet" />
 	<link rel="stylesheet" type="text/css" href="/assets/prism.css" />
 </head>
-<body class="main">
-	<header>
-		<% if(page.url == '/'){ %><h1 class="title"><% } else { %><p class="title"><% } %>
-			<a href="/">Demo store for devs of every hair styles</a>
-		<% if(page.url == '/'){ %></h1><% } else { %></p><% } %>
-	</header>
-	<section class="content">
-		<%- content %>
-	</section>
-	<footer>
-		<p>
-			Made with a few ☕️ at <a href="https://snipcart.com/">Snipcart</a>
-		</p>
-		<p>
-			Read <a href="">our blog post on 11ty</a> or go see <a href="">the demo's repo</a>
-		</p>
-	</footer>
+<body>
+	<div class="main">
+		<header>
+			<% if(page.url == '/'){ %><h1 class="title"><% } else { %><p class="title"><% } %>
+				<a href="/">Demo store for devs of every hair styles</a>
+			<% if(page.url == '/'){ %></h1><% } else { %></p><% } %>
+		</header>
+		<section class="content">
+			<%- content %>
+		</section>
+		<footer>
+			<p>
+				Made with a few ☕️ at <a href="https://snipcart.com/">Snipcart</a>
+			</p>
+			<p>
+				Read <a href="https://snipcart.com/blog/11ty-javascript-static-site-generator-tutorial">our blog post on 11ty</a> or go see
+				<a href="https://github.com/snipcart/snipcart-11ty-demo">the demo's repo</a>
+			</p>
+		</footer>
+	</div>
 </body>
 </html>
